@@ -1,0 +1,51 @@
+\noindent
+In the first experiment, a simple temperature converter which could be used to change the scale of the needed temperature was created. In fact, this is just a preliminary step of a fully fledged temperature control system able to monitor the ambient temperature and take some actions based on some controlling systems. In fact, this application could be modified to control the AC operating in a closed room to keep the temperature constant at any desired level.\\
+
+\noindent
+The following figure shows a simple temperature monitoring system developed using LabVIEW and the DAQ card. In here, a thermocouple attached to the DAQ card provides a voltage proportional to the temperature.
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.96\linewidth]{pics/labview/dis1}
+		\caption{Block diagram}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.96\linewidth]{pics/labview/dis2}
+		\caption{Front panel}
+		\label{fig:sub2}
+	\end{subfigure}
+	\caption{A simple LabVIEW application capable of monitoring temperature}
+	\label{fig:animals}
+\end{figure}
+
+\noindent
+The melody player created in the third experiment could be used as a simple DJ application. By adding more features like superimposing the same melody at a higher pitch to create harmonics and adding  distortions, a fairly advanced DJ system based on LabVIEW could be made. By integrating with Arduino, , a hardware controlled interface could be created instead of the instead of the software controlled interface in LabVIEW.\\
+
+\noindent
+When using the DAQ card, it was important to ensure that the DAQ card worked without any hitch. For this process, the device monitor which opens automatically when the DAQ card is plugged to the computer was used. In this process, the test panels were used to test the input and output functionalities of the DAQ card.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{pics/labview/dis3}
+	\caption{NI USB-6008 device monitor}
+	\label{fig:dis3}
+\end{figure}
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/dis4}
+	\caption{Test panel of the NI USB-6008 DAQ card}
+	\label{fig:dis4}
+\end{figure}
+
+\noindent
+The resistance meter, the capacitance meter and the LabVIEW's ability to measure the voltage could be added together to form a digital multimeter. It would be much more advantageous as any of the above 3 measurement could be taken with the touch of a button. \\
+
+\noindent
+The low sampling frequency (10 kHz) of the USB-6008 DAQ card was a limiting factor in practical use. So, this DAQ card could not be used in high speed applications where the need to sample signals at a much higher frequency arises. As predicted by the Nyquist theorem, the DAQ card can sample signals having frequencies below 5 kHz. Otherwise, various problems like aliasing, data loss will  occur due to the under sampling.

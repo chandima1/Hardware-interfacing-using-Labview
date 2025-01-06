@@ -1,0 +1,104 @@
+In a data acquisition system, the analog signals of some physical parameters are digitized in order to be captured and manipulated through a computer. In this process, there are mainly 2 essential components required.  
+
+\begin{enumerate}
+	\item A software capable of data capturing and manipulation
+	\item A data acquisition hardware
+	\item A computer 
+\end{enumerate}
+
+\subsection{LabVIEW software}
+
+LabVIEW (Laboratory Virtual Instrumentation Engineering Workbench) is a platform and a development environment from National Instruments which comprises of a visual programming language. LabVIEW can be used in a myriad of applications. Some of them are as follows.
+\begin{itemize}
+	\item As a DAQ system able to measure physical parameters.
+	\item Validation or verification of electronic designs.
+	\item Development of production test systems.
+	\item Designing of smart machines or industrial equipment.
+\end{itemize} 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/labview/ha}
+	\caption{Main interface of LabVIEW}
+	\label{fig:ha}
+\end{figure}
+
+\noindent
+A new program in LabVIEW can be created by creating a new VI. A VI comprises of 2 interfaces.
+\begin{enumerate}
+	\item Block diagram used to create the program.
+	\item Front panel used to execute the created program and display results.
+\end{enumerate}
+
+\pagebreak
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pics/labview/a1}
+		\caption{Block diagram}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pics/labview/a2}
+		\caption{Front panel}
+		\label{fig:sub2}
+	\end{subfigure}
+	\caption{The interfaces of a new VI}
+	\label{fig:animals}
+\end{figure}
+
+\noindent
+The program is created in the block diagram. The functions needed for a specific program can be directly inserted by using the function panel which can be accessed by right clicking on the block diagram.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/labview/c1}
+	\caption{Function palette}
+	\label{fig:ha}
+\end{figure}
+
+\noindent
+The indicators and controllers can be used to display and control the processed output. The output can be viewed from the front panel using the indicators. The control panel is used to insert the needed indicators and they could be obtained by accessing the control palette by right clicking on the front panel.
+
+\pagebreak
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/labview/c2}
+	\caption{Control palette}
+	\label{fig:ha}
+\end{figure}
+
+
+\subsection{DAQ hardware compatible with LabVIEW}
+
+The NI USB-6008 DAQ card is a DAQ hardware commonly used in tandem with LabVIEW in DAQ  applications. The USB-6008 provides basic DAQ functionality for applications such as simple data logging, portable measurements and academic lab experiments. It is an affordable component which is powerful enough for more sophisticated measurement applications. \\
+
+\noindent
+The USB-6008 comprises of the following features.
+\begin{itemize}
+	\item 8 analog inputs (12-bit, 10 kS/s)
+	\item 2 analog outputs (12-bit)
+	\item 12 digital I/O
+\end{itemize}
+
+
+\pagebreak
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.65\linewidth]{pics/labview/usb6008}
+	\caption{Front view of the NI USB-6008 DAQ card}
+	\label{fig:usb6008}
+\end{figure}
+
+
+\begin{figure}[!hb]
+	\centering
+	\includegraphics[width=0.65\linewidth]{pics/labview/d1}
+	\caption{Pinout of the USB-6008}
+	\label{fig:d1}
+\end{figure}
+
+\pagebreak

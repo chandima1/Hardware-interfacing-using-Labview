@@ -1,0 +1,33 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Theory}{2}
+\contentsline {subsection}{\numberline {2.1}LabVIEW software}{2}
+\contentsline {subsection}{\numberline {2.2}DAQ hardware compatible with LabVIEW}{4}
+\contentsline {section}{\numberline {3}Methodology}{6}
+\contentsline {subsection}{\numberline {3.1}Introduction to LabVIEW}{6}
+\contentsline {subsubsection}{\numberline {3.1.1}Temperature unit converter}{6}
+\contentsline {subsubsection}{\numberline {3.1.2}Wave mixer}{6}
+\contentsline {subsubsection}{\numberline {3.1.3}Frequency sequence generator}{7}
+\contentsline {subsubsection}{\numberline {3.1.4}DTMF decoder and encoder}{10}
+\contentsline {subsection}{\numberline {3.2}Interfacing the DAQ card}{12}
+\contentsline {subsubsection}{\numberline {3.2.1}Creating a function generator}{12}
+\contentsline {subsubsection}{\numberline {3.2.2}Four channel oscilloscope}{13}
+\contentsline {subsubsection}{\numberline {3.2.3}Resistance meter}{13}
+\contentsline {subsubsection}{\numberline {3.2.4}Generation of the VI curve of a diode}{14}
+\contentsline {subsubsection}{\numberline {3.2.5}Capacitance meter}{15}
+\contentsline {section}{\numberline {4}Results and Analysis}{17}
+\contentsline {subsection}{\numberline {4.1}Introduction to LabVIEW}{17}
+\contentsline {subsubsection}{\numberline {4.1.1}Temperature unit converter}{17}
+\contentsline {subsubsection}{\numberline {4.1.2}Wave mixer}{17}
+\contentsline {subsubsection}{\numberline {4.1.3}Frequency sequence generator}{19}
+\contentsline {subsubsection}{\numberline {4.1.4}DTMF decoder and encoder}{20}
+\contentsline {subsection}{\numberline {4.2}Interfacing the DAQ card}{22}
+\contentsline {subsubsection}{\numberline {4.2.1}Creating a function generator}{22}
+\contentsline {subsubsection}{\numberline {4.2.2}Four channel oscilloscope}{23}
+\contentsline {subsubsection}{\numberline {4.2.3}Resistance meter}{23}
+\contentsline {subsubsection}{\numberline {4.2.4}Generation of the VI curve of a diode}{24}
+\contentsline {subsubsection}{\numberline {4.2.5}Capacitance meter}{24}
+\contentsline {section}{\numberline {5}Discussion}{26}
+\contentsline {section}{\numberline {6}Conclusion}{28}
+\contentsline {section}{\numberline {7}References}{29}
+\contentsline {section}{Appendices}{30}
+\contentsline {subsection}{Appendix A - Diya goda sema thena guitar tab}{30}

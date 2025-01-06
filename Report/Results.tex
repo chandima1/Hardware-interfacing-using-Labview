@@ -1,0 +1,250 @@
+\subsection{Introduction to LabVIEW}
+
+\subsubsection{Temperature unit converter}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/labview/out1_1}
+	\caption{Temperature unit converter front panel}
+	\label{fig:out11}
+\end{figure}
+
+\noindent
+As shown above, using this application, any temperature could be converted from Celsius scale to Kelvin or Fahrenheit scale. The output scale could be controlled by the switch by selecting the Kelvin or the Fahrenheit scale.
+
+
+\subsubsection{Wave mixer}
+
+\noindent
+In this experiment, the FFT of 3 sinusoidal signals and the FFT of the signal formed by superimposing the 3 signals were obtained. When obtaining the FFT, the first 1000 samples of the respective signals were taken into consideration. There was no need to choose a larger samples as the frequencies and the amplitudes of the signal weren't fluctuating  with time. The plotting of FFT curves were done using the first 500 samples (single sided amplitude spectrum) as the second 500 samples were the mirror image of the first set. The normalized output was obtained by dividing the FFT values by the maximum FFT value. For this process, an array of FFT values were created and the maximum of that array was obtained and all the FFT values were divided from that maximum value. \\
+
+\noindent
+When obtaining the calibrated FFT outputs of the signals, the normalized values were multiplied by the maximum amplitude. To find the maximum amplitude of the superimposed signal, an array consisting of the 3 amplitude values of the 3 sinusoidal signals was created and the maximum of that array was obtained. \\
+
+\noindent
+The front panel of the wave mixer was as below.
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/out1_2}
+	\caption{Wave mixer front panel}
+	\label{fig:out12}
+\end{figure}
+
+\pagebreak
+
+\subsubsection{Frequency sequence generator}
+
+\textbf{Sin wave generator}\\
+
+\noindent
+The front panel of the sin wave generator was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/out1_3a}
+	\caption{Sin wave generator front panel}
+	\label{fig:out13a}
+\end{figure}
+
+
+\noindent
+In this part, the sinusoidal signal corresponding to the entered frequency, amplitude and phase was played through the speaker of the computer. There was  stark difference in the sound heard through the computer speaker when the frequency changed. But when amplitude or phase was changed, there was no apparent change in the sound heard.\\
+
+
+\noindent
+\textbf{Playing the pure notes of the middle C ($ C_{4} $) octave}\\
+
+\noindent
+In this part, the pure notes of the middle C octave was played through the speaker of the computer. The front panel of the middle C octave generator was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/labview/out1_3b}
+	\caption{Middle C octave's pure note player front panel}
+	\label{fig:out13b}
+\end{figure}
+
+\noindent
+\textbf{Playing the melody of a song}\\
+
+\noindent
+The front panel of the melody player was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/labview/out1_3c}
+	\caption{Song melody player front panel}
+	\label{fig:out13c}
+\end{figure}
+
+\noindent
+In this part of the exercise, the above 2 parts were combined together with some additional blocks to play the melody of the song \textbf{Diya goda sema thena}. In this process, the notes and timing of the song was saved in an array. To find the relevant notes and timing, the tab sheet in the Appendix was used in tandem with a guitar. \\
+
+\noindent
+By adjusting the sampling information namely sampling frequency and the number of samples, the tempo of the song could be adjusted. By adjusting the delay, the time gap between 2 notes could be adjusted. The transpose option could be used to transpose the key of the song to another note. Essentially, this application could be used as a simple music maker software capable of editing notes, timing, tempo and the pitch of the song. 
+
+\subsubsection{DTMF decoder and encoder}
+
+\textbf{DTMF encoder}\\
+
+\noindent
+The front panel of the DTMF encoder was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/out1_4a}
+	\caption{DTMF encoder front panel}
+	\label{fig:out14a}
+\end{figure}
+
+\noindent
+In this part, a DTMF encoder was created. It could play the sound of the pressed key. The amount of time a sound was played could be adjusted by adjusting the sampling information. In this application, the time for which a sound was played was adjusted to be 30 ms as it's the international standard for DTMF playing time.\\
+
+\noindent
+Through the 3 waveform graphs, the row signal, column signal and the superimposition of the row signal and the column signal were displayed. \\
+
+\noindent
+\textbf{DTMF decoder}\\
+
+\noindent
+The front panel of the DTMF decoder was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/out1_4b}
+	\caption{DTMF decoder front panel}
+	\label{fig:out14b}
+\end{figure}
+
+
+\noindent
+In this part, a DTMF decoder was created. It filtered the sound obtained through the built in  microphone of the laptop and identified the row frequency and the column frequency and thereby, the key pressed. \\
+
+\noindent
+Although 2 filters of the order 5 were used to filter the noise, didn't work as expected all the time. When the background noise was high, it showed erroneous results.
+
+\pagebreak
+
+\subsection{Interfacing the DAQ card}
+
+\subsubsection{Creating a function generator}
+
+\noindent
+The front panel of the function generator was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/labview/out2_1}
+	\caption{Function generator front panel}
+	\label{fig:out21}
+\end{figure}
+
+\noindent
+In this experiment, a function generator was created. In this process, the output of the signal was obtained from the AO0 pin of the DAQ card. The drawback in this application was that signals of frequencies higher than 500 Hz could not be produced. This was due to the fact that the sampling frequency of the DAQ card was set at 1000 Hz. Although the maximum sampling frequency of the DAQ card was at 10 kHz, at that frequency, the signals produced were incorrect in the sense that the frequencies and the  type of the signal (sinusoidal, triangular, square or saw tooth) were very much different from the intended ones. \\
+
+\noindent
+In the sampling frequency of 1 kHz, to get the correct output signal, the input frequency had to be multiplied by 4 to get the intended output frequency. This correction factor was found by trial and error.\\
+
+\noindent
+The output signal resembled more like a digital signal with clear steps instead of showing an analog signal. The main reason for this behaviour was that the number of samples were set at 100.\\
+
+\noindent
+Another drawback of this application was that only 1 type of signal could be generated at a given instance. This was due to the fact that superimposition of 2 or more signals in the same phase created a signal with an amplitude greater than 5 V. The maximum voltage that can be output from the DAQ card is 5 V. So, it is a physical limitation of the DAQ card.
+
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{pics/labview/comp1}
+		\caption{Input to the DAQ card}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{pics/labview/comp}
+		\caption{Output through the DAQ card }
+		\label{fig:sub2}
+	\end{subfigure}
+	\caption{The effect of the number of samples on the shape of the signal}
+	\label{fig:animals}
+\end{figure}
+
+\pagebreak
+
+\subsubsection{Four channel oscilloscope}
+
+\noindent
+The front panel of the four channel oscilloscope was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/out2_2}
+	\caption{Four channel oscilloscope front panel}
+	\label{fig:out22}
+\end{figure}
+
+\noindent
+In this experiment, a four channel oscilloscope was created. Both a waveform chart and a waveform graph were used in showing the outputs. The main difference between the 2 graphs was the data acquisition method. In the waveform graph, evenly sampled measurements were displayed while in the waveform chart, data was typically acquired at a constant rate. Simply said, the waveform chart displayed a larger span of the signal on its display while the waveform graph dispalyed a much smaller sapn of the signal. By using both the plots, one could get a clear idea as to how the signal has varied with time and how the signal behaves presently.\\
+
+\noindent
+As 4 colours were used for the 4 channels, the signals could be identified clearly and could be used as a simple oscilloscope  where finding a digital signal oscilloscope (DSO) is impossible.
+
+\subsubsection{Resistance meter}
+
+\noindent
+The front panel of the resistance meter was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/labview/out2_3}
+	\caption{Resistance meter front panel}
+	\label{fig:out21}
+\end{figure}
+
+\noindent
+As shown above, when a resistor of 1.1 k$ \Omega $ was used as the unknown resistor with the known resistor being 330 $ \Omega $, the calculated resistance value was 1023.49 $ \Omega $. So, it's evident that this resistance meter can calculate resistance values to about 8 \textdiscount\  accuracy. Although the accuracy is not as high as a multimeter resistance reading, it can be quite useful in finding a rough estimate for an unknown resistance.
+
+\subsubsection{Generation of the VI curve of a diode}
+
+\noindent
+The front panel of the application used for generating the VI curve of a diode  was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/labview/out2_4}
+	\caption{Generation of the VI curve of a diode front panel}
+	\label{fig:out24}
+\end{figure}
+
+\noindent
+In this experiment, by adjusting the step size, curves with higher accuracy could be obtained as the increments by which the input voltage vary equals to the step size. As a control for the resistance was added, the diode curve could be obtained using any needed resistor. The instantaneous voltage and the current readings were also displayed in order to get more details regarding the current voltage and current through the diode.
+
+\subsubsection{Capacitance meter}
+
+\noindent
+The front panel of the capacitance meter  was as below.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{pics/labview/out2_5}
+	\caption{Capacitance meter front panel}
+	\label{fig:out24}
+\end{figure}
+
+\noindent
+The capacitance was displayed in Farads. The boolean switch named \textbf{capacitance calculated} was to indicate that the process has finished and the  capacitance value has been calculated. \\
+
+\noindent
+The resistance of the series  resistor connected to the capacitor could be controlled by the resistance control in the front panel. It allowed choosing varoius resistance values for the needed circuit without limiting into 1 resistance value.\\
+
+\noindent
+As the time calculation was done in ms, the resistance had to be chosen such that the time taken for the capacitor to charge to the predefined level (3.15 V) was in the scale of ms (milliseconds). So, a small resistor was chosen. (330 $ \Omega $).\\
+
+\noindent
+The limitation of this application was that it could not be used to find a completely unknown capacitance. A rough idea about the capacitance is of utmost importance so that the resistor could be chosen such that the time constant $ \tau $ is in the order of ms (milliseconds).
+
+\pagebreak

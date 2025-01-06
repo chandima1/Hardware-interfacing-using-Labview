@@ -1,0 +1,272 @@
+\subsection{Introduction to LabVIEW}
+
+In this section, the functions and indicators in LabVIEW were introduced.
+
+\subsubsection{Temperature unit converter}
+
+In this exercise, a temperature converter was interfaced which accepted any temperature in Celsius and converted it to a temperature in Kelvin or Fahrenheit. For this operation, the following equations were used. 
+\begin{enumerate}
+	\item To convert to Kelvin (K) from Celsius ($^{\circ}C$)
+			\newline $ K=C+273.15 $
+ 	\item To convert Celsius ($^{\circ}C$) to Fahrenheit ($^{\circ}F$)
+			\newline $ F=\dfrac{9}{5} \times C+ 32$
+\end{enumerate}
+
+\noindent
+The block diagram was constructed as follows.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/labview/ex1_1}
+	\caption{Block diagram for the temperature converter}
+	\label{fig:ex1
+	}
+\end{figure}
+
+\noindent
+In this exercise, a numeric control (Celsius temperature) was used to input the needed temperature and the output was displayed through the numeric indicator (Converted temperature). The switch was used to select the needed unit (Kelvin or Fahrenheit).
+
+\subsubsection{Wave mixer}
+
+In this experiment, a wave  mixer was constructed by superimposing  3 sinusoidal signals. In this process, numeric controls were added to control the phase, frequency and amplitudes of the 3 signals separately. Then, the 3  created signals and the superimposed signal were plotted in waveform graphs. Finally, the Fourier transformed outputs of the 3 input signals and the superimposed signal were plotted in waveform graphs. In obtaining the FFT curves, the axes were calibrated suitably. In this process, the following steps were followed.
+
+\begin{enumerate}
+	\item The FFT values of the signal were obtained using the FFT transform control in the signal processing tool box. Here, only the first 1000 samples of the signal was used for the FFT.
+	\item Then, the first 500 values were chosen (the next 500 values are the mirror image values of the first 500 values)
+	\item Then, the obtained 500 values were divided by the maximum value in the set (to normalize the y axis) and the result was multiplied by the amplitude of the signal to obtain the calibrated y axis
+\end{enumerate} 
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.95\linewidth]{pics/labview/ex1_2}
+	\caption{Block diagram for the wave mixer}
+	\label{fig:ex2}
+\end{figure}
+
+\subsubsection{Frequency sequence generator}
+
+This experiment comprised of 3 exercises.
+\begin{enumerate}
+	\item Creating a sinusoidal signal and playing it through the speaker connected to the sound card of the computer.
+	\item Playing the pure notes of the C octave starting from the middle C ($C_{4}$). 
+	\item Playing the melody of a song.
+\end{enumerate}
+
+\noindent
+In the first exercise of this experiment, a sinusoidal signal was created with the ability to control its frequency and amplitude and output. Then, the created  signal was played through the speaker. In this process, the \textbf{play waveform} control was used to output the signal. In sampling the created signal, the sampling frequency and the number of samples could be adjusted so that the playing tempo of the signal could be adjusted. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/labview/ex1_3a}
+	\caption{Block diagram for playing a signal}
+	\label{fig:ex3}
+\end{figure}
+
+\noindent
+In the second exercise of this experiment, the pure notes of the $C_{4}$ octave was played through the speaker. In this process, the frequencies of the notes were stored in an array. In sampling the created signal, the sampling frequency and the number of samples could be adjusted so that the playing tempo of the signal could be adjusted.
+
+\begin{figure}[!h]
+ 	\centering
+ 	\includegraphics[width=0.8\linewidth]{pics/labview/ex1_3b}
+ 	\caption{Block diagram for playing the pure notes of the $C_{4}$ octave }
+ 	\label{fig:ex4}
+\end{figure}
+
+\noindent
+In the third exercise of this experiment, the melody of the song "Diya goda sema thena" by Sunil Shantha was played using the speaker. In this process, the notes and timing of the song was stored in a 2 dimensional array. In sampling the created signal, the sampling frequency and the number of samples could be adjusted so that the playing tempo of the signal could be adjusted. \\
+
+\noindent
+In addition to the changing of the amplitude and the tempo of the song, a control for shifting the pitch of the melody by transposing was added. From this control, the melody could be transposed either up or down by the needed amount of semitones. For example, the melody originally played on the C major scale could be easily transposed to D major scale by entering 2 in the \textbf{Transpose} numeric control.
+
+\pagebreak
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/ex1_3c}
+	\caption{Block diagram for playing the melody of the song}
+	\label{fig:ex5}
+\end{figure}
+
+\pagebreak
+\subsubsection{DTMF decoder and encoder}
+
+In this experiment, as the first exercise, a DTMF encoder was constructed. In this process, the frequencies needed for the DTMF generation were obtained from 2 arrays and the sinusoidal signals with the corresponding frequencies were superimposed together to generate DTMF signals. Here, the time in which a sound played after a key was pressed was adjusted so that the sound played for 30 ms. It is the standard time for a DTMF signal. But this time could be adjusted by changing the sampling frequency and the number of samples.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/ex1_4a}
+	\caption{Block diagram for DTMF generation}
+	\label{fig:ex6}
+\end{figure}
+ 
+\noindent
+In the second exercise of this experiment,a DTMF decoder was constructed. In this process, the signal was first filtered out using 2 Butterworth band pass filters of order 5 to separate out the low frequency and the high frequency components in the signal. In this process, the filter used to identify the low frequency had a lower cutoff frequency of 650 Hz and a higher cutoff frequency of 970 Hz. The filter used to identify the high frequency had a lower cutoff frequency of 1170 Hz and a higher cutoff frequency of 1500 Hz. \\
+
+\noindent
+Then, the 2 frequencies of the 2 filtered signals were identified using the \textbf{Tone measurement} tool in the signal processing toolbox.\\
+
+\noindent
+Finally the pressed key was detected and shown using the \textbf{Played button} indicator if the identified frequencies were between $\pm$ 20 Hz of the exact frequencies of the DTMF tones. 
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/ex1_4b}
+	\caption{Block diagram for DTMF decoding}
+	\label{fig:ex7}
+\end{figure}
+
+\pagebreak
+
+\subsection{Interfacing the DAQ card}
+
+In this section, the USB-6008 DAQ card was used in various applications by interfacing it with LabVIEW.
+
+\subsubsection{Creating a function generator}
+
+In this exercise, a function generator capable of producing sinusoidal, square, triangular and saw tooth waves was created. In this process, the amplitude and the frequency of the signal could be adjusted by using the numeric controls. \\
+
+\noindent
+A constant sampling frequency of 1000 Hz and a sample size of 100 was given to the signal generators as the sampling information cluster. \\
+
+\noindent
+The input frequency was multiplied by a factor of 4 to get the output signal with the needed frequency.\\
+
+\noindent
+ An offset of 2.5 V was given to the signal as the DAQ card was only capable of producing voltages between 0 V and 5 V. Negative voltages couldn't be produced from the DAQ card.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/ex2_1}
+	\caption{Block diagram for the function generator}
+	\label{fig:ex8}
+\end{figure}
+
+\pagebreak
+
+\subsubsection{Four channel oscilloscope}
+
+In this exercise, a four channel oscilloscope was constructed. In this process, the AI0, AI1, AI2 and AI3 analog inputs were  used as 4 channels to input any needed signal. The signals corresponding to channel 1 (AI0), channel 2 (AI1), channel 3 (AI3) and channel 4 (AI3) were represented using the colours white, red, green and blue respectively. The needed channel could be selected by switching the boolean switch.\\
+
+\noindent
+For each channel, a fixed offset value  was found by trial and error was added in order to show the correct amplitude reading. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{pics/labview/ex2_2}
+	\caption{Block diagram for the four channel oscilloscope}
+	\label{fig:ex9}
+\end{figure}
+
+\subsubsection{Resistance meter}
+
+In this experiment, a resistance meter was created. In this process, the following circuit was used to voltage across the unknown resistance by the DAQ card and thereby the unknown resistance.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.35\linewidth]{pics/labview/res}
+	\caption{Circuit diagram of the resistance meter circuit}
+	\label{fig:ex101}
+\end{figure}
+
+\noindent
+From the Ohm's law, an expression for the $V_{out}$ in terms of the input voltage $V_{in}$, known resistance $R_{1}$ and the unknown resistance $R_{2}$  can be written as follows.
+
+\begin{equation}
+V_{out}= V_{in} \times \frac{R_{2}}{R_{2}+R_{1}}
+\end{equation}
+
+\noindent
+As the $V_{out}$ can be measured using the DAQ card and LabVIEW, the unknown resistance can be found by the following equation.
+
+\begin{equation}
+R_{2}=V_{out} \times \dfrac{R_{1}}{V_{in}-V_{out}}
+\end{equation}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/ex2_2}
+	\caption{Block diagram of the resistance meter}
+	\label{fig:ex11}
+\end{figure}
+
+\subsubsection{Generation of the VI curve of a diode}
+
+In this experiment, the VI curve of a diode was generated.  A LM 4007 diode was used to generate the VI curve. In this process, the following circuit was constructed.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\linewidth]{pics/labview/diode_cct}
+	\caption{Circuit diagram for generating the VI curve of a diode}
+	\label{fig:ex12}
+\end{figure}
+
+\noindent
+Here, the input voltage ($V _{in} $) was incremented in increments of any needed step size and that voltage was output through the DAQ card and connected in series to the resistor ($R _{1} $) as in the circuit. Here, the connected resistor's resistance must be input in the resistance control in the front panel of the LabVIEW application. \\
+
+\noindent
+Then, the voltage through the resistor ($R _{1} $) is measured through the DAQ card. Then, the following equation was used to find the voltage through the diode ($ V _{d} $).
+\begin{equation}
+	V _{d} = V _{in}-V _{r}
+\end{equation}
+
+\noindent
+The current through the diode was calculated from the following equation.
+
+\begin{equation}
+I _{d} = \dfrac{V _{r}}{R _{1}}
+\end{equation}
+
+\noindent
+Then, the calculated $V _{d} $ was plotted against the calculated $ I _{d}  $ using a \textbf{xy graph} .
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pics/labview/ex2_4}
+	\caption{Block diagram for generating the VI curve of a diode}
+	\label{fig:ex13}
+\end{figure}
+
+
+\subsubsection{Capacitance meter}
+
+In this experiment, a capacitance meter was constructed. In this process, a charging capacitor was used to determine the time constant ($ \tau $) and thereby, the capacitance of the capacitor. The following circuit was constructed in order to measure the capacitance.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/labview/cap_cct}
+	\caption{Circuit diagram for the capacitance meter}
+	\label{fig:ex14}
+\end{figure}
+
+\pagebreak
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{pics/labview/rc2}
+	\caption{Charging curve of a capacitor}
+	\label{fig:ex15}
+\end{figure}
+
+
+\noindent
+To find the capacitance, the following equation was used.
+
+\begin{equation}
+	V_{c}= V_{s}\,  (1-e^{- \dfrac{t}{RC}}) 
+\end{equation}
+
+\noindent
+In calculating the time constant, the first step was to calculate the time taken until $ V_{c} = 3.15 V $  when the supply voltage was 5 V ($ V_{s} = 5 V $). Then, the above equation (5) can be simplified as follows.
+
+
+\begin{gather}
+  \nonumber 3.15= 5\, (1-e^{- \dfrac{t}{RC}})\\
+\nonumber e^{- \dfrac{t}{RC}} = 1 - \dfrac{3.15}{5}  \\
+t \approx RC
+\end{gather}
+
+\noindent
+So, from equation (6), when time is measured and the resistance is known, the capacitance can be calculated.

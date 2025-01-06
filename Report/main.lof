@@ -1,0 +1,39 @@
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Components of a DAQ system\relax }}{1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces A DAQ system with a DAQ card and LabVIEW\relax }}{1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Main interface of LabVIEW\relax }}{2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The interfaces of a new VI\relax }}{3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Function palette\relax }}{3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Control palette\relax }}{4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Front view of the NI USB-6008 DAQ card\relax }}{5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Pinout of the USB-6008\relax }}{5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Block diagram for the temperature converter\relax }}{6}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Block diagram for the wave mixer\relax }}{7}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Block diagram for playing a signal\relax }}{7}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Block diagram for playing the pure notes of the $C_{4}$ octave \relax }}{8}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Block diagram for playing the melody of the song\relax }}{9}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Block diagram for DTMF generation\relax }}{10}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Block diagram for DTMF decoding\relax }}{11}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Block diagram for the function generator\relax }}{12}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Block diagram for the four channel oscilloscope\relax }}{13}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Circuit diagram of the resistance meter circuit\relax }}{13}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Block diagram of the resistance meter\relax }}{14}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Circuit diagram for generating the VI curve of a diode\relax }}{14}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Block diagram for generating the VI curve of a diode\relax }}{15}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Circuit diagram for the capacitance meter\relax }}{15}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Charging curve of a capacitor\relax }}{16}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Temperature unit converter front panel\relax }}{17}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Wave mixer front panel\relax }}{18}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sin wave generator front panel\relax }}{19}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Middle C octave's pure note player front panel\relax }}{19}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Song melody player front panel\relax }}{20}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces DTMF encoder front panel\relax }}{20}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces DTMF decoder front panel\relax }}{21}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Function generator front panel\relax }}{22}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces The effect of the number of samples on the shape of the signal\relax }}{22}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Four channel oscilloscope front panel\relax }}{23}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Resistance meter front panel\relax }}{23}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Generation of the VI curve of a diode front panel\relax }}{24}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Capacitance meter front panel\relax }}{24}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A simple LabVIEW application capable of monitoring temperature\relax }}{26}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces NI USB-6008 device monitor\relax }}{26}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Test panel of the NI USB-6008 DAQ card\relax }}{27}

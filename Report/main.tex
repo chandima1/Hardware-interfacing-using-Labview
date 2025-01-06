@@ -1,0 +1,99 @@
+\documentclass[titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{standalone}
+\usepackage{tocloft}
+\numberwithin{figure}{section}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+\geometry{ a4paper, total={150mm,237mm}, left=30mm, top=30mm }
+%matlab code input method by copy pasting
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\pagenumbering{roman}
+%% used for table captions
+\usepackage{floatrow} 
+\floatsetup[table]{capposition=top}
+%% used for subsubsubsections
+\usepackage{titlesec}
+%\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{verbatim}
+%matlab code input method selecting the file name
+\usepackage[framed,numbered]{matlab-prettifier}
+\usepackage{caption}
+\usepackage{subcaption}
+ 
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\vspace*{\fill}
+	{\scshape\LARGE University of Colombo \par}
+	\vspace{0.1cm}
+	{\scshape\Large Department of physics\par}
+	\vspace{1cm}
+	{\huge\bfseries HARDWARE INTERFACING\par}
+	\vspace{1cm}
+    Chandima Kasun Edirisinghe\par
+	Index 12033\par
+	July, 2017\par
+    \vspace*{\fill}
+
+\end{titlepage}
+
+\begin{abstract}
+\thispagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{1}
+The purpose of this report is to effectively use the LabVIEW software in data acquisition and data manipulation.
+Data acquisition and data manipulation are very important aspects of many modern systems including scientific applications. The first part of the practical is based on basic operations in LabVIEW to get familiar with the GUI and the tools of the LabVIEW. The second part of the practical include applying the learnt techniques in signal generation, signal analysis and data acquisition and processing. In signal generation, a signal generator capable of producing sinusoidal, triangular, rectangular and
+saw tooth signals was created. In signal analysis, an oscilloscope was created. In data acquisition and processing, a resistance meter, a capacitance meter and a diode curve generating tool were created.
+
+\end{abstract}
+
+\tableofcontents
+\setcounter{page}{2}
+\pagebreak
+\listoffigures
+\pagebreak
+% only if table is there %
+%\listoftables
+%\pagebreak
+
+\pagenumbering{arabic}
+
+\section{Introduction}
+\input{introduction.tex}
+\pagebreak
+\section{Theory}
+\input{Theory.tex}
+\pagebreak
+\section{Methodology}
+\input{Methodology.tex}
+\pagebreak
+\section{Results and Analysis}
+\input{Results.tex}
+\pagebreak
+\section{Discussion}
+\input{Discussion.tex}
+\pagebreak
+\section{Conclusion}
+\input{Conclusions.tex}
+
+\pagebreak
+
+\section{References}
+\input{References.tex}
+\pagebreak
+
+\section*{Appendices}
+\addcontentsline{toc}{section}{Appendices}
+\input{appendix.tex}
+
+\pagebreak
+
+\end{document}
